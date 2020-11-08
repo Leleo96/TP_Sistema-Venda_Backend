@@ -4,15 +4,21 @@ const status = require('http-status');
 
 // Cria o método Insert, obtendo os dados da request
 exports.Insert = (req, res, next) => {
+    const usuarioID = req.body.usuarioID;
     const observacoes = req.body.observacoes;
     const valorTotal = req.body.valorTotal;
     const ativo = req.body.ativo;
 
+    if (isNaN(usuarioID)){
+        res.status(status.NOT_FOUND).send();
+        return;
+    }
     // Popula cada um dos campos do model com os campos recebido na request
-    Pedido.create({
+    Pedido.create({        
         observacoes: observacoes,
         valorTotal: valorTotal,
         ativo: ativo,
+        usuarioID: usuarioID,
     })
         //then = registra o que queremos que aconteca quando a Promise for resolvida
         .then(pedido => {

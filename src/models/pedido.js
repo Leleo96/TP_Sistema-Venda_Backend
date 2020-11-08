@@ -14,12 +14,12 @@ const Pedido = sequelize.define("pedido", {
         type: Sequelize.INTEGER
     },
     observacoes: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING(100),
 
     },
     valorTotal: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DOUBLE(),
     },
 
@@ -27,6 +27,11 @@ const Pedido = sequelize.define("pedido", {
         allowNull: false,
         type: Sequelize.BOOLEAN(),
         defaultValue: true
+    },
+    usuarioID: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER
     }
 });
 // To creat relational fields, Foreign Key

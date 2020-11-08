@@ -4,10 +4,10 @@ module.exports = {
         database: {
             host: "localhost",
             port: "3306",
-            name: "DB_SISTEMA",
+            name: "DB_LOCAL",
             dialect: "mysql",
             user: "root",
-            password: "password"
+            password: "admin123"
         }
     },
     production: {

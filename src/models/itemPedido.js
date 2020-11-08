@@ -24,11 +24,20 @@ const ItemPedido = sequelize.define("itempedido", {
         type: Sequelize.DOUBLE(),
 
     },
-
     ativo: {
         allowNull: false,
         type: Sequelize.BOOLEAN(),
         defaultValue: true
+    },
+    produtoID: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+    },
+    pedidoID: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER
     }
 });
 // To creat relational fields, Foreign Key

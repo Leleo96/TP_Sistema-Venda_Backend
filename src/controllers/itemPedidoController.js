@@ -8,12 +8,16 @@ exports.Insert = (req, res, next) => {
     const qtd = req.body.qtd;
     const valor = req.body.valor;
     const ativo = req.body.ativo;
+    const pedidoID = req.body.pedidoID;
+    const produtoID = req.body.produtoID;
 
     // Popula cada um dos campos do model com os campos recebido na request
     ItemPedido.create({
         qtd: qtd,
         valor: valor,
         ativo: ativo,
+        pedidoID: pedidoID,
+        produtoID: produtoID
     })
         //then = registra o que queremos que aconteca quando a Promise for resolvida
         .then(itempedido => {

@@ -4,7 +4,7 @@
   "description": "Entregar",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
     "http-status": "^1.4.2",
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.5",
-    "sequelize-msnodesqlv8": "^0.2.6-beta.8",
     "tedious": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
