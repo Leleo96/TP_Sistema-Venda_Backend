@@ -25,8 +25,8 @@ router.put('/pedidos/:id', PedidoController.Update);
 router.delete('/pedidos/:id', PedidoController.Delete);
 
 router.post('/itempedidos', ItemPedidoController.Insert);
-router.get('/itempedidos', ItemPedidoController.SelectAll);
-router.get('/itempedidos/:id', ItemPedidoController.SelectDetail);
+//router.get('/itempedidos', ItemPedidoController.SelectAll);
+router.get('/itempedidos/:id', ItemPedidoController.SelectAll);
 router.put('/itempedidos/:id', ItemPedidoController.Update);
 router.delete('/itempedidos/:id', ItemPedidoController.Delete);
 

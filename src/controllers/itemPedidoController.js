@@ -32,7 +32,12 @@ exports.Insert = (req, res, next) => {
 };
 //criando o método selecionar todos
 exports.SelectAll = (req, res, next) => {
-    ItemPedido.findAll()
+    const pedidoID = req.params.id;
+    ItemPedido.findAll({
+        where: {
+            pedidoID: pedidoID
+        }
+      })
         .then(itempedido => {
             if (itempedido) {
                 res.status(status.OK).send(itempedido);
