@@ -27,11 +27,6 @@ const Pedido = sequelize.define("pedido", {
         allowNull: false,
         type: Sequelize.BOOLEAN(),
         defaultValue: true
-    },
-    usuarioID: {
-        allowNull: false,
-        primaryKey: true,
-        type: Sequelize.INTEGER
     }
 });
 // To creat relational fields, Foreign Key
