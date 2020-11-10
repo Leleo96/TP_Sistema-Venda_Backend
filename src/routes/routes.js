@@ -2,7 +2,7 @@ const express = require('express');
 const UsuarioController = require('../controllers/usuarioController.js');
 const ProdutoController = require('../controllers/produtoController.js');
 const PedidoController = require('../controllers/pedidoController.js');
-const ItemPedidoController = require('../controllers/itempedidoController.js');
+const ItemPedidoController = require('../controllers/itemPedidoController.js');
 
 const router = express.Router();
 
