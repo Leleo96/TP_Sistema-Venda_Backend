@@ -1,6 +1,5 @@
-const Pedido = require('../models/itempedido');
 const status = require('http-status');
-const ItemPedido = require('../models/itempedido');
+const ItemPedido = require('../models/itemPedido');
 
 
 // Cria o método Insert, obtendo os dados da request
